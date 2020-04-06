@@ -1,5 +1,5 @@
 *.class
 *.log
 *.cache
-ScalaImplicitObj/.idea
-
+ImplicitObj/.idea
+CallByName/.idea
