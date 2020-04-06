@@ -1,5 +1,7 @@
 *.class
 *.log
 *.cache
-ImplicitObj/.idea
+ImplicitObj/idea
 CallByName/.idea
+LazyVal/.idea
+*.swp
