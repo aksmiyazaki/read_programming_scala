@@ -1,3 +1,4 @@
+package chapter3.PatternMatchingStuff
 
 object MatchCompilerBehavior extends App {
 

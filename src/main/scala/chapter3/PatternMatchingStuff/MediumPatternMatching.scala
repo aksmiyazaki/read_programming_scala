@@ -1,3 +1,5 @@
+package chapter3.PatternMatchingStuff
+
 object MediumPatternMatching extends App {
   for (x <- Seq(1, 2, 2.7, "one", "two", "four")) {
     val str = x match {

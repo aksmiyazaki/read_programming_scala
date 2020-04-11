@@ -1,3 +1,5 @@
+package chapter3.PatternMatchingStuff
+
 case class Address(street: String, city: String, country: String)
 case class Person(name: String, age: Int, address: Address)
 
@@ -24,6 +26,22 @@ object DeepMatching extends App {
   for(itm <- withIdx) {
     val str = itm match {
       case ((item, value), idx) => f"$idx: $item - $$$value%.2f"
+    }
+    println(str)
+  }
+
+  println
+  println
+  println("==========")
+  println
+  println
+
+  // Deep Matching assigning to an object
+  for (person <- Seq(alice, jota, pepe)) {
+    val str = person match {
+      case p @ Person(name, age, Address(street, _, _)) if age > 60 => s"Hey $p, you are on covid-19 risk group."
+      case p @ Person("Pépe", _, _) => s"PÉÉÉÉÉÉÉÉÉÉPE $p"
+      case p @ Person("Alice", _, Address(wonderland, _, _ )) => s"Hey $p, is this $wonderland wonderland?"
     }
     println(str)
   }

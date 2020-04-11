@@ -1,3 +1,5 @@
+package chapter3.PatternMatchingStuff
+
 object SimplePatternMatching extends App {
   // A simple matching
   val bools = Seq(true, false)

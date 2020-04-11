@@ -1,3 +1,5 @@
+package chapter3.PatternMatchingStuff
+
 object MatchingTuples extends App {
   val aSeq = Seq(("Scala", "Funny", "Language"),("Golang", "Eficient", "Language"), ("Python", "Easy", "Language"))
 

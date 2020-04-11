@@ -1,3 +1,5 @@
+package chapter3.PatternMatchingStuff
+
 object UnderstandingSeq extends App {
   // The matching at Seq clause is also a case using a tuple.
   // There is a object called `+:` which is used in this case (the method unapply of this object is used.

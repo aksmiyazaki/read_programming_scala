@@ -1,3 +1,5 @@
+package chapter3.PatternMatchingStuff
+
 object CaseClauseWithGuards extends App {
   val aSeq = Seq(1,2,3,4,5)
 
