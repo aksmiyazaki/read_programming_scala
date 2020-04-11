@@ -1,4 +1,4 @@
-package chapter3.PatternMatchingStuff
+package chapter4.PatternMatchingStuff
 
 object UnderstandingSeq extends App {
   // The matching at Seq clause is also a case using a tuple.

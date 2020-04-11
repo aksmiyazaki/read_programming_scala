@@ -1,4 +1,4 @@
-package chapter3.PatternMatchingStuff
+package chapter4.PatternMatchingStuff
 
 object LegacyIssueGenericType extends App {
   // Watch this BEAUTY!

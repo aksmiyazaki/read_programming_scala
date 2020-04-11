@@ -1,4 +1,4 @@
-package chapter3.PatternMatchingStuff
+package chapter4.PatternMatchingStuff
 
 case class With[A, B](a: A, b: B)
 

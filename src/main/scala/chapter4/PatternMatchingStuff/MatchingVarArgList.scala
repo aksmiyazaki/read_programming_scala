@@ -1,4 +1,4 @@
-package chapter3.PatternMatchingStuff
+package chapter4.PatternMatchingStuff
 
 object Op extends Enumeration {
   type Op = Value
@@ -9,7 +9,7 @@ object Op extends Enumeration {
   val LT = Value("<")
 }
 
-import chapter3.PatternMatchingStuff.Op._
+import chapter4.PatternMatchingStuff.Op._
 case class WhereOp[T](columnName: String, op: Op, value: T)
 case class WhereIn[T](columnName: String, val1: T, vals: T*)
 

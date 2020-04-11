@@ -1,5 +1,4 @@
-import chapter1_2.TestImplicitObject.ImplicitObject
-import chapter1_2.TestImplicitObject.ImplicitObject._
+
 
 
 object ImplicitsTest extends App {

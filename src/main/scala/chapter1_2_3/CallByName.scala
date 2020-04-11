@@ -1,3 +1,5 @@
+package chapter1_2_3
+
 object CallByName extends App {
   val rootString = "teste"
   var callNo = 0

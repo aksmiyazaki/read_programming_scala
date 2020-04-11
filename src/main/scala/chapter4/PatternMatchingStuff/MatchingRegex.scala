@@ -1,4 +1,4 @@
-package chapter3.PatternMatchingStuff
+package chapter4.PatternMatchingStuff
 
 object MatchingRegex extends App {
   // When creating a regex to match something, use triple quotes.

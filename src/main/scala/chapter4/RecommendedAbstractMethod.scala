@@ -1,4 +1,4 @@
-package chapter3
+package chapter4
 
 abstract class Fruit {
   // It is recommended to declare val's as no-argument methods

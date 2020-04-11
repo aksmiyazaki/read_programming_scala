@@ -1,4 +1,4 @@
-package chapter3.PatternMatchingStuff
+package chapter4.PatternMatchingStuff
 
 case class Address(street: String, city: String, country: String)
 case class Person(name: String, age: Int, address: Address)

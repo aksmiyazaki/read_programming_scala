@@ -1,3 +1,5 @@
+package chapter1_2_3
+
 
 object LazyVal extends App {
   lazy val iHaveAnExpensiveInitialization = Initialize()
