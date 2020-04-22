@@ -1,7 +1,7 @@
+import chapter1_2_3.TestImplicitObject._
 
 
-
-object ImplicitsTest extends App {
+object ImplicitsSimpleTest extends App {
   def implicitPrint(implicit MyImplicitValue: Int): Unit = {
     println(MyImplicitValue)
   }
