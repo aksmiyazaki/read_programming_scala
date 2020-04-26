@@ -1,25 +1,27 @@
 package chapter5
 
-sealed trait TailEat
+import scala.annotation.implicitNotFound
 
-sealed trait HeadEat
+sealed trait StateNoLegs
 
-sealed trait BodyEat
+sealed trait StateNoTail
 
-sealed trait NoMoreTortuguita
+sealed trait StateNoHead
+
+sealed trait StateFinished
 
 case class Tortuguita(legs: Boolean, tail: Boolean, head: Boolean, body: Boolean)
 
 case class Eat[Step](t: Tortuguita)
 
 object DoEat {
-  def legs(t: Tortuguita): Eat[TailEat] = Eat(Tortuguita(true, false, false, false))
+  def legs(t: Tortuguita): Eat[StateNoLegs] = Eat(Tortuguita(true, false, false, false))
 
-  def tail(t: Eat[TailEat]): Eat[HeadEat] = Eat(Tortuguita(true, true, false, false))
+  def tail(t: Eat[StateNoLegs]): Eat[StateNoTail] = Eat(Tortuguita(true, true, false, false))
 
-  def head(t: Eat[HeadEat]): Eat[BodyEat] = Eat(Tortuguita(true, true, true, false))
+  def head(t: Eat[StateNoTail]): Eat[StateNoHead] = Eat(Tortuguita(true, true, true, false))
 
-  def body(t: Eat[BodyEat]): Eat[NoMoreTortuguita] = Eat(Tortuguita(true, true, true, true))
+  def body(t: Eat[StateNoHead]): Eat[StateFinished] = Eat(Tortuguita(true, true, true, true))
 }
 
 object Pipeline {
@@ -38,8 +40,8 @@ object PhantomTypes extends App { /// aka the right order to eat a Tortuguita.
 
   // Why is this useful?
   // This constrains method call chain:
-  //val eatWrong = DoEat tail t
-  //val eatWrongAgain = DoEat head t
+  // val eatWrong = DoEat tail t
+  // val eatWrongAgain = DoEat head t
   //val eatWrongAgainAgain = DoEat body t
 
   // Fancy way to chain methods with a defined operator
