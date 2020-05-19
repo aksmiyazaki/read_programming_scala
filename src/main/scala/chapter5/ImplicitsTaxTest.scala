@@ -22,7 +22,7 @@ object ImplicitsTaxTest extends App {
   def calcTax(amount: Float)(implicit rate:Float): Float = amount * rate
 
   {
-    import SimpleStateSalesTax.rate
+    import SimpleStateSalesTax._
     val amount = 100F
     println(s"Tax on $amount is ${calcTax(amount)}")
   }
