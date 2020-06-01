@@ -30,4 +30,6 @@ object InitializationTraitIssues extends App {
 
   println(s"Values are ${aObjUsingPreInitializedFields.divisor} and ${aObjUsingPreInitializedFields.calc}")
 
+  Seq(1,2,3)
+
 }
